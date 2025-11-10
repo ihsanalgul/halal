@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Helal E-Kodları Kılavuzu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Helal, şüpheli ve haram E-kodları için hızlı infografik kılavuz." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #020617;
+      --card-border: #1e293b;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.15);
+      --accent-warn: #eab308;
+      --accent-haram: #ef4444;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --pill-bg: #111827;
+      --pill-border: #1f2933;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 60%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 24px 12px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1080px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.2);
+      border: 1px solid rgba(34, 211, 238, 0.5);
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22d3ee;
+      box-shadow: 0 0 12px #22d3ee;
+    }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 16px auto;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--text-muted);
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+    }
+
+    .legend-dot.helal {
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+    }
+
+    .legend-dot.warn {
+      background: var(--accent-warn);
+      box-shadow: 0 0 8px var(--accent-warn);
+    }
+
+    .legend-dot.haram {
+      background: var(--accent-haram);
+      box-shadow: 0 0 8px var(--accent-haram);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      border-radius: 18px;
+      background: linear-gradient(145deg, rgba(15,23,42,0.98), rgba(2,6,23,1));
+      border: 1px solid var(--card-border);
+      padding: 14px;
+      box-shadow:
+        0 0 0 1px rgba(15,23,42,0.9),
+        0 18px 45px rgba(0,0,0,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.2), transparent 65%);
+      opacity: 0.7;
+      pointer-events: none;
+      mix-blend-mode: screen;
+    }
+
+    .card.warn::before {
+      background: radial-gradient(circle at top left, rgba(234,179,8,0.25), transparent 65%);
+    }
+
+    .card.haram::before {
+      background: radial-gradient(circle at top left, rgba(248,113,113,0.25), transparent 65%);
+    }
+
+    .card-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-chip {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid rgba(34,197,94,0.6);
+    }
+
+    .card-chip.warn {
+      background: rgba(234,179,8,0.12);
+      color: var(--accent-warn);
+      border-color: rgba(234,179,8,0.7);
+    }
+
+    .card-chip.haram {
+      background: rgba(248,113,113,0.12);
+      color: var(--accent-haram);
+      border-color: rgba(248,113,113,0.7);
+    }
+
+    .card-desc {
+      position: relative;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .group {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .group-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      margin-bottom: 6px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 7px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      color: #d1d5db;
+      white-space: nowrap;
+    }
+
+    .pill-range {
+      opacity: 0.9;
+    }
+
+    .footer {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .footer strong {
+      color: #e5e7eb;
+    }
+
+    .source {
+      font-size: 10px;
+      text-align: center;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span>Helal E-Kodları – Hızlı Referans</span>
+      </div>
+      <h1>Helal E-Kodları İnfoGrafiği</h1>
+      <p class="subtitle">
+        Aşağıdaki liste, gıda katkı maddelerini genel helallik durumuna göre <strong>özetler</strong>.
+        Kesin hüküm için her zaman <strong>helal sertifikası</strong> ve üretici bilgisi esas alınmalıdır.
+      </p>
+      <div class="legend">
+        <div class="legend-item">
+          <span class="legend-dot helal"></span> Genellikle Helal
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot warn"></span> Kaynağa Bağlı / Kontrol Gerekli
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot haram"></span> Haram veya Şüpheli
+        </div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <!-- GENELLİKLE HELAL -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">
+            🟩 Genellikle Helal
+          </div>
+          <span class="card-chip">Bitkisel / Mineral / Sentetik</span>
+        </div>
+        <p class="card-desc">
+          Kaynağı doğal veya sentetik olan, domuz veya kesim şekline bağlı olmayan katkı maddeleri.
+          Helal sertifikalı ürünlerde yaygın kullanılır.
+        </p>
+
+        <div class="group">
+          <div class="group-label">Renk vericiler</div>
+          <div class="pill-row">
+            <span class="pill pill-range">E100</span>
+            <span class="pill">E101</span>
+            <span class="pill">E140</span>
+            <span class="pill">E141</span>
+            <span class="pill">E150</span>
+            <span class="pill">E153</span>
+            <span class="pill">E160a–f</span>
+            <span class="pill">E161b–g</span>
+            <span class="pill">E162</span>
+            <span class="pill">E163</span>
+            <span class="pill">E170</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Koruyucular</div>
+          <div class="pill-row">
+            <span class="pill">E200–E203</span>
+            <span class="pill">E260–E263</span>
+            <span class="pill">E270</span>
+            <span class="pill">E280–E283</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Antioksidanlar</div>
+          <div class="pill-row">
+            <span class="pill">E300–E304</span>
+            <span class="pill">E306–E309</span>
+            <span class="pill">E320</span>
+            <span class="pill">E321</span>
+            <span class="pill">E330–E337</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Tatlandırıcılar</div>
+          <div class="pill-row">
+            <span class="pill">E420</span>
+            <span class="pill">E421</span>
+            <span class="pill">E950–E969</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Kıvam vericiler / Lifler</div>
+          <div class="pill-row">
+            <span class="pill">E400–E404</span>
+            <span class="pill">E406</span>
+            <span class="pill">E407</span>
+            <span class="pill">E410</span>
+            <span class="pill">E412</span>
+            <span class="pill">E413</span>
+            <span class="pill">E414</span>
+            <span class="pill">E415</span>
+            <span class="pill">E417</span>
+            <span class="pill">E418</span>
+            <span class="pill">E440</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Asit düzenleyiciler / Tamponlar</div>
+          <div class="pill-row">
+            <span class="pill">E500–E503</span>
+            <span class="pill">E504</span>
+            <span class="pill">E507–E511</span>
+            <span class="pill">E515–E519</span>
+            <span class="pill">E520–E523</span>
+            <span class="pill">E524–E530</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Mineral / Tuz bazlı katkılar</div>
+          <div class="pill-row">
+            <span class="pill">E535–E536</span>
+            <span class="pill">E540</span>
+            <span class="pill">E551–E559</span>
+            <span class="pill">E570</span>
+            <span class="pill">E901–E905</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- KAYNAĞA BAĞLI -->
+      <article class="card warn">
+        <div class="card-header">
+          <div class="card-title">
+            🟡 Kaynağa Bağlı / Kontrol Gerekli
+          </div>
+          <span class="card-chip warn">Üreticiye sor</span>
+        </div>
+        <p class="card-desc">
+          Hem bitkisel hem hayvansal üretilebilen, bazen domuz veya İslami kesim dışı sığır yağı
+          kullanılabilen katkılar. <strong>Helal sertifikası</strong> önemli.
+        </p>
+
+        <div class="group">
+          <div class="group-label">Yağ asidi türevleri</div>
+          <div class="pill-row">
+            <span class="pill">E422</span>
+            <span class="pill">E470a–b</span>
+            <span class="pill">E471</span>
+            <span class="pill">E472a–f</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Esterler / Emülgatörler</div>
+          <div class="pill-row">
+            <span class="pill">E473</span>
+            <span class="pill">E474</span>
+            <span class="pill">E475</span>
+            <span class="pill">E476</span>
+            <span class="pill">E477</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Laktat ve sorbitan türevleri</div>
+          <div class="pill-row">
+            <span class="pill">E481</span>
+            <span class="pill">E482</span>
+            <span class="pill">E491–E495</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Diğer</div>
+          <div class="pill-row">
+            <span class="pill">E904 (şellak)</span>
+            <span class="pill">E542 (kemik fosfat)</span>
+          </div>
+        </div>
+
+        <p class="card-desc">
+          Bu grupta yer alan kodlar için:
+          <br />• Ambalajda <strong>Helal / Halal</strong> logosu arayın.
+          <br />• Mümkünse üreticiden <strong>bitkisel mi, hayvansal mı</strong> olduğunu sorun.
+        </p>
+      </article>
+
+      <!-- HARAM / ŞÜPHELİ -->
+      <article class="card haram">
+        <div class="card-header">
+          <div class="card-title">
+            🟥 Haram veya Şüpheli
+          </div>
+          <span class="card-chip haram">Kaçın / Alternatif bak</span>
+        </div>
+        <p class="card-desc">
+          Domuz, böcek veya hayvansal et/jelatin kaynaklı olması muhtemel katkılar. Bazılarının
+          bitkisel versiyonu da vardır, ama <strong>şüphe varsa terk edilir</strong>.
+        </p>
+
+        <div class="group">
+          <div class="group-label">Doğrudan problemli</div>
+          <div class="pill-row">
+            <span class="pill">E120 (karmin – böcek)</span>
+            <span class="pill">E441 (jelatin)</span>
+            <span class="pill">E542 (kemik fosfat)</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-label">Et ekstraktı türevleri</div>
+          <div class="pill-row">
+            <span class="pill">E631</span>
+            <span class="pill">E635</span>
+          </div>
+        </div>
+
+        <p class="card-desc">
+          E631 ve E635 bazen bitkisel (maya, nişasta) kaynaklı üretilebilir, ancak çoğu zaman
+          <strong>et kaynaklı</strong> olduğu için helal sertifikası yoksa riskli kabul edilir.
+        </p>
+
+        <p class="card-desc">
+          Güvenli tercih: <strong>Helal sertifikalı ürün + açık kaynak bilgisi</strong>.
+        </p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <strong>Not:</strong> Bu infografik, Türk Gıda Kodeksi, EFSA ve çeşitli helal sertifikasyon kurumlarının
+        genel kabullerine göre hazırlanmış <strong>özet bir rehberdir</strong>.
+        Fıkhi hüküm için yetkili ilmî mercilere başvurulmalıdır.
+      </p>
+      <p>
+        En güvenli yol: <strong>Helal sertifikalı markalar</strong> ve üretici beyanı.
+      </p>
+    </footer>
+    <div class="source">
+      Kaynaklar: Türk Gıda Kodeksi, EFSA (European Food Safety Authority), GIMDES, JAKIM, IFANCA – genel sınıflandırmalar.
+    </div>
+  </main>
+</body>
+</html>
