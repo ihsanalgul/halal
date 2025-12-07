@@ -3,153 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HAVO 2 - DEHB Dostu Haftalık Plan</title>
+  <title>DEHB Dostu Ders Planı • 15 Yaş</title>
   <style>
     @page { size: A4 portrait; margin: 10mm; }
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #fff3e0);
-      padding: 15mm;
+      font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 10mm;
       margin: 0;
       color: #333;
+      line-height: 1.6;
     }
     .container {
       max-width: 210mm;
       margin: 0 auto;
       background: white;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
     }
     h1 {
       text-align: center;
-      color: #00695c;
-      font-size: 28px;
-      margin-bottom: 5px;
+      color: #5e35b1;
+      font-size: 32px;
+      margin: 0 0 10px;
+      text-shadow: 2px 2px #e0e0e0;
     }
     .subtitle {
       text-align: center;
-      color: #00796b;
-      font-size: 16px;
-      margin-bottom: 20px;
+      color: #7b1fa2;
+      font-size: 19px;
+      font-weight: bold;
+    }
+    .intro {
+      background: #f3e5f5;
+      padding: 15px;
+      border-radius: 15px;
+      margin: 20px 0;
+      border-left: 8px solid #ab47bc;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 20px 0;
+      margin: 25px 0;
       font-size: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     th {
-      background: #00695c;
+      background: #7b1fa2;
       color: white;
-      padding: 12px 8px;
+      padding: 14px;
       text-align: center;
     }
     td {
-      border: 2px solid #004d40;
-      padding: 10px;
+      border: 2px solid #ce93d8;
+      padding: 12px;
       vertical-align: top;
     }
-    .day { background: #e0f2f1; font-weight: bold; width: 12%; text-align: center; }
-    .time { background: #b2dfdb; font-weight: bold; }
-    .lesson { background: #fff8e1; font-weight: bold; }
-    .task { background: #f1f8e9; }
-    .reward { background: #e8f5e9; font-style: italic; }
+    .day { background: #e1f5fe; font-weight: bold; font-size: 18px; text-align: center; }
+    .time { background: #b3e5fc; font-weight: bold; }
+    .lesson { background: #fff0f4; font-weight: bold; color: #c2185b; }
+    .how { background: #f9f8ff; }
+    .reward {
+      background: #e8f5e9;
+      font-style: italic;
+      color: #2e7d32;
+    }
+    .tips {
+      background: #fff8e1;
+      padding: 20px;
+      border-radius: 15px;
+      margin: 25px 0;
+      border: 3px dashed #ffca28;
+    }
     .footer {
-      margin-top: 25px;
-      padding: 15px;
-      background: #004d40;
+      margin-top: 30px;
+      padding: 20px;
+      background: linear-gradient(45deg, #4a148c, #7b1fa2);
       color: white;
-      border-radius: 10px;
+      border-radius: 15px;
       text-align: center;
+      font-size: 22px;
+      font-weight: bold;
     }
-    .checklist {
-      text-align: center;
-      font-size: 24px;
-      margin: 20px 0;
-    }
-    .checklist span { margin: 0 10px; }
+    .emoji { font-size: 28px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>HAVO 2 – DEHB Dostu Haftalık Ders Planı</h1>
-    <p class="subtitle">15 yaş • Pomodoro 20/5 • Kısa seans + ödül = Süper odak!</p>
+    <h1>15 Yaşındaki Süper Kahramanlar İçin<br>DEHB Dostu Ders Planı</h1>
+    <p class="subtitle">Alperen Öztürk’ün @abdlidoktor reelinden ilhamla hazırlandı!</p>
+
+    <div class="intro">
+      <strong>Merhaba şampiyon!</strong><br>
+      Bu plan tam sana göre! Kısa çalışma + bol hareket + ödül sistemiyle dersler artık korkutucu değil, oyun gibi olacak. 
+      DEHB bir dezavantaj değil, senin süper gücün! Sadece biraz farklı yöntemlerle çalışıyoruz, hepsi bu 💜
+    </div>
+
+    <h2 style="text-align:center; color:#6a1b9a;">Neden Bu Plan İşe Yarıyor?</h2>
+    <ul style="font-size:18px; background:#f8bbd0; padding:20px; border-radius:15px;">
+      <li>🧠 Kısa seanslar (20 dakika) → Beynin sıkılmıyor!</li>
+      <li>🏃‍♂️ Molalarda hareket → Enerjini atıyorsun!</li>
+      <li>🌈 Renkli ve görsel → Gözün kaymıyor!</li>
+      <li>🎁 Her iş bitince ödül → Motivasyon tavan!</li>
+    </ul>
 
     <table>
       <thead>
         <tr>
           <th>Gün</th>
           <th>Saat</th>
-          <th>Ders & Konu</th>
-          <th>Nasıl Çalışacağım? (20 dk)</th>
-          <th>Mola & Ödül (5–10 dk)</th>
+          <th>Konu / Seans</th>
+          <th>Nasıl Çalışacağım?</th>
+          <th>Mola & Ödül</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="day">Pazartesi</td>
-          <td class="time">17:00–17:20<br>17:30–17:50</td>
-          <td class="lesson">Nederlands – Lezen & Begrijpen<br>Engels – Vocab & Grammar</td>
-          <td class="task">1 metin oku → 3 soruyu renkli kalemle cevapla<br>15 kelime flashcard + 5 cümle kur (Quizlet)</td>
-          <td class="reward">Zıpla 20 kez + 1 şarkı<br>Su iç + esneme</td>
+          <td class="day">Pazartesi<br><small>Matematik Günü</small></td>
+          <td class="time">18:00–18:20<br>18:30–18:50</td>
+          <td class="lesson">Matematik – Formül tekrarı<br>Tarih – Kısa notlar</td>
+          <td class="how">3 örnek çöz, timer kur<br>1 sayfa oku → yıldızla işaretle, sesli anlat</td>
+          <td class="reward">5 dk zıplama + şarkı<br>10 dk yürüyüş + çizgi film fragmanı</td>
         </tr>
         <tr>
-          <td class="day">Salı</td>
-          <td class="time">17:00–17:20<br>17:30–17:50</td>
-          <td class="lesson">Wiskunde B<br>Aardrijkskunde</td>
-          <td class="task">4-5 soru çöz → yanlışları kırmızı ile işaretle<br>Bölümü oku → haritaya 5 yer renklendir</td>
-          <td class="reward">5 dk telefon oyunu<br>Dans et!</td>
+          <td class="day">Salı<br><small>Türkçe Günü</small></td>
+          <td class="time">17:30–17:45<br>18:00–18:20</td>
+          <td class="lesson">Türkçe – Okuma anlama<br>İngilizce – Kelime</td>
+          <td class="how">Paragraf oku → 3 soru cevapla (renkli kalem)<br>10 kelime flashcard → yanlış olunca komik yüz çiz 😜</td>
+          <td class="reward">5 dk esneme + atıştırmalık<br>10 dk telefon oyunu</td>
         </tr>
         <tr>
-          <td class="day">Çarşamba</td>
-          <td class="time">17:00–17:20<br>17:30–17:50</td>
-          <td class="lesson">Geschiedenis<br>Natuurkunde</td>
-          <td class="task">Zaman çizelgesi çiz → 6 olayı yıldızla<br>1 formülü 3× yaz + 2 dk video izle</td>
-          <td class="reward">10 dk dışarı çık<br>Küçük atıştırmalık</td>
+          <td class="day">Çarşamba<br><small>Fen Günü</small></td>
+          <td class="time">18:00–18:15<br>18:30–18:45</td>
+          <td class="lesson">Biyoloji – Şema<br>Fizik – Deney tekrarı</td>
+          <td class="how">Konuyu ağaç gibi çiz<br>1 formülü kağıda çiz, oyuncakla dene (top at!</td>
+          <td class="reward">Derin nefes + arkadaşına mesaj<br>15 dk dışarı çık</td>
         </tr>
         <tr>
-          <td class="day">Perşembe</td>
-          <td class="time">17:00–17:20<br>17:30–17:50</td>
-          <td class="lesson">Scheikunde<br>Duits / Fransız</td>
-          <td class="task">10 kavramı kartlara yaz → karıştır ve tekrarla<br>12 kelime + 4 cümle yüksek sesle oku</td>
-          <td class="reward">Arkadaşa mesaj at<br>5 dk TikTok (sadece ödül!)</td>
+          <td class="day">Perşembe<br><small>Sosyal Günü</small></td>
+          <td class="time">17:00–17:20<br>17:40–18:00</td>
+          <td class="lesson">Coğrafya – Harita<br>Din Kültürü</td>
+          <td class="how">Haritayı renklendir, macera hikayesi uydur<br>Aynada kendine anlat, 3 nokta not et</td>
+          <td class="reward">5 dk dans + eğlenceli kitap<br>10 dk çizim/hobi</td>
         </tr>
         <tr>
-          <td class="day">Cuma</td>
-          <td class="time">17:00–17:30</td>
-          <td class="lesson">Zayıf Ders Tekrarı (bu hafta en zor olan)</td>
-          <td class="task">15 dk tekrar + 10 dk eski proeftoets sorusu</td>
-          <td class="reward">BÜYÜK ÖDÜL: 30 dk oyun/dizi</td>
+          <td class="day">Cuma<br><small>Tekrar Günü</small></td>
+          <td class="time">18:00–18:30</td>
+          <td class="lesson">Haftanın en zayıf konusu</td>
+          <td class="how">15 dk tekrar + 15 dk test çöz (yanlışları sil baştan yap)</td>
+          <td class="reward">20 dk oyun + hafta sonu film seç!</td>
         </tr>
         <tr>
-          <td class="day">Cumartesi</td>
-          <td class="time">10:30–10:50</td>
-          <td class="lesson">Ekstra (Ekonomi/Wiskunde vs.)</td>
-          <td class="task">Sadece 1 kısa blok – rahat kıyafetlerle</td>
-          <td class="reward">Tüm gün serbest!</td>
+          <td class="day">Cumartesi<br><small>Esnek Gün</small></td>
+          <td class="time">10:00–10:20</td>
+          <td class="lesson">İsteğe bağlı zayıf ders</td>
+          <td class="how">Rahat ortam, müzikle çalışabilirsin</td>
+          <td class="reward">Tüm gün serbest + arkadaş buluşması</td>
         </tr>
         <tr>
-          <td class="day">Pazar</td>
+          <td class="day">Pazar<br><small>Dinlenme Günü</small></td>
           <td class="time">—</td>
-          <td class="lesson">DİNLENME GÜNÜ</td>
-          <td class="task">Haftayı değerlendir → sticker yapıştır!</td>
-          <td class="reward">Aileyle pizza/film gecesi 🎉</td>
+          <td class="lesson">Tam dinlenme!</td>
+          <td class="how">Hafif yürüyüş, hobi, planı değerlendir</td>
+          <td class="reward">Aileyle pizza gecesi 🍕🎉</td>
         </tr>
       </tbody>
     </table>
 
-    <div class="checklist">
-      <strong>Başarı Takibi:</strong><br>
-      <span>☐ Pzt</span> <span>☐ Sal</span> <span>☐ Çar</span> 
-      <span>☐ Per</span> <span>☐ Cum</span> <span>☐ Cmt</span> <span>☐ Paz</span>
-      <br><br>7 kutu dolu = HAFTA ŞAMPİYONU! 🏆
+    <div class="tips">
+      <h2 style="text-align:center; color:#ff6f00;">Adım Adım Süper İpuçları</h2>
+      <ol style="font-size:17px;">
+        <li>📱 Telefonu başka odaya koy! Sadece ödül zamanı aç.</li>
+        <li>⏰ 20 dakika çalış → 5-10 dakika mola (timer zilinde zafer dansı yap!)</li>
+        <li>✏️ Renkli kalemler, sticker’lar, post-it’ler kullan → beynin bayılır!</li>
+        <li>Dikkatin kaçarsa → 10 saniye derin nefes al, sonra devam.</li>
+        <li>Her biten seans için “Yaptım!” yaz → 5 seans = büyük ödül (yeni oyun?)</li>
+        <li>Arkadaşınla “çalışma buddy” ol → birbirinize “Bitirdim!” mesajı atın.</li>
+      </ol>
     </div>
 
     <div class="footer">
-      <strong>Kurallar:</strong> Telefonu başka odaya koy • Her 20 dk sonra mola • 
-      Dikkatin dağılırsa 10 sn derin nefes al • Sen başarabilirsin! 💪
-      <br>Yazdırıldı: 07 Aralık 2025 – HAVO 2 Süper Güç Planı
+      <span class="emoji">🚀</span> Bu planı uygularsan dersler oyun gibi olacak!<br>
+      DEHB bir dezavantaj değil, senin farklı bir süper gücün!<br>
+      <span class="emoji">💜</span> Sen başarabilirsin, buna inanıyorum! <span class="emoji">💜</span>
     </div>
   </div>
 </body>
