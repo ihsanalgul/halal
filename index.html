@@ -1,193 +1,157 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!DOCTYPE html><html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DEHB Dostu Ders Planı • 15 Yaş</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoom → YouTube Özel Canlı Yayın Rehberi</title>
   <style>
-    @page { size: A4 portrait; margin: 10mm; }
     body {
-      font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      padding: 10mm;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f4f6f8;
       margin: 0;
-      color: #333;
+      padding: 0;
+      color: #1f2933;
       line-height: 1.6;
     }
+    header {
+      background: linear-gradient(135deg, #cc0000, #ff0000);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.95;
+    }
     .container {
-      max-width: 210mm;
-      margin: 0 auto;
-      background: white;
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px 40px 20px;
     }
-    h1 {
-      text-align: center;
-      color: #5e35b1;
-      font-size: 32px;
-      margin: 0 0 10px;
-      text-shadow: 2px 2px #e0e0e0;
+    .step {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
-    .subtitle {
-      text-align: center;
-      color: #7b1fa2;
-      font-size: 19px;
-      font-weight: bold;
+    .step h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #111827;
+      border-left: 5px solid #dc2626;
+      padding-left: 12px;
     }
-    .intro {
-      background: #f3e5f5;
-      padding: 15px;
-      border-radius: 15px;
-      margin: 20px 0;
-      border-left: 8px solid #ab47bc;
+    ul {
+      padding-left: 20px;
+      margin: 12px 0 0 0;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 25px 0;
-      font-size: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    li {
+      margin-bottom: 8px;
     }
-    th {
-      background: #7b1fa2;
-      color: white;
+    .highlight {
+      background: #fef2f2;
+      border-left: 4px solid #dc2626;
+      padding: 12px 14px;
+      margin-top: 14px;
+      border-radius: 6px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    .info {
+      background: #eff6ff;
+      border-left: 4px solid #2563eb;
       padding: 14px;
+      margin-top: 16px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .danger {
+      background: #fff7ed;
+      border-left: 4px solid #ea580c;
+      padding: 14px;
+      margin-top: 16px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    footer {
       text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 40px;
     }
-    td {
-      border: 2px solid #ce93d8;
-      padding: 12px;
-      vertical-align: top;
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
     }
-    .day { background: #e1f5fe; font-weight: bold; font-size: 18px; text-align: center; }
-    .time { background: #b3e5fc; font-weight: bold; }
-    .lesson { background: #fff0f4; font-weight: bold; color: #c2185b; }
-    .how { background: #f9f8ff; }
-    .reward {
-      background: #e8f5e9;
-      font-style: italic;
-      color: #2e7d32;
-    }
-    .tips {
-      background: #fff8e1;
-      padding: 20px;
-      border-radius: 15px;
-      margin: 25px 0;
-      border: 3px dashed #ffca28;
-    }
-    .footer {
-      margin-top: 30px;
-      padding: 20px;
-      background: linear-gradient(45deg, #4a148c, #7b1fa2);
-      color: white;
-      border-radius: 15px;
-      text-align: center;
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .emoji { font-size: 28px; }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>15 Yaşındaki Süper Kahramanlar İçin<br>DEHB Dostu Ders Planı</h1>
-    <p class="subtitle">Alperen Öztürk’ün @abdlidoktor reelinden ilhamla hazırlandı!</p>
-
-    <div class="intro">
-      <strong>Merhaba şampiyon!</strong><br>
-      Bu plan tam sana göre! Kısa çalışma + bol hareket + ödül sistemiyle dersler artık korkutucu değil, oyun gibi olacak. 
-      DEHB bir dezavantaj değil, senin süper gücün! Sadece biraz farklı yöntemlerle çalışıyoruz, hepsi bu 💜
-    </div>
-
-    <h2 style="text-align:center; color:#6a1b9a;">Neden Bu Plan İşe Yarıyor?</h2>
-    <ul style="font-size:18px; background:#f8bbd0; padding:20px; border-radius:15px;">
-      <li>🧠 Kısa seanslar (20 dakika) → Beynin sıkılmıyor!</li>
-      <li>🏃‍♂️ Molalarda hareket → Enerjini atıyorsun!</li>
-      <li>🌈 Renkli ve görsel → Gözün kaymıyor!</li>
-      <li>🎁 Her iş bitince ödül → Motivasyon tavan!</li>
+<body><header>
+  <h1>Zoom Üzerinden YouTube’da Özel (Listelenmemiş) Canlı Yayın</h1>
+  <p>Adım adım, sade ve hatasız teknik rehber</p>
+</header><div class="container">  <div class="step">
+    <h2>1. Zoom Toplantısını Oluştur</h2>
+    <ul>
+      <li>Zoom hesabına gir → <strong>Toplantılar</strong> → <strong>Yeni Bir Toplantı Planla</strong></li>
+      <li>Konu, tarih, saat, saat dilimi ve süre bilgilerini gir</li>
+      <li><strong>Bekleme Odası</strong> isteğe bağlı olarak açık olabilir</li>
+      <li>Ayarları kontrol et ve <strong>Kaydet</strong></li>
     </ul>
+  </div>  <div class="step">
+    <h2>2. YouTube Canlı Yayını Oluştur</h2>
+    <ul>
+      <li><code>youtube.com</code> → Sağ üstten <strong>Oluştur</strong> → <strong>Canlı Yayına Geç</strong></li>
+      <li><strong>Yeni Program Oluştur</strong> seç</li>
+      <li>Başlık gir ve <strong>"Bu yayın çocuklara uygun değil"</strong> seçeneğini işaretle</li>
+      <li>Yayın tarihini ve saatini ayarla</li>
+      <li>Gizlilik: <strong>Listelenmemiş (Unlisted)</strong></li>
+      <li>Akış gecikmesi: <strong>Ultra düşük gecikme</strong></li>
+      <li><strong>Yayın Anahtarı</strong>nı kopyala</li>
+    </ul>
+  </div>  <div class="step">
+    <h2>3. Zoom ile YouTube’u Bağla</h2>
+    <ul>
+      <li>Zoom → <strong>Toplantılarım</strong> → <strong>Canlı Yayını Yapılandır</strong></li>
+      <li><strong>Özel yayın hizmetinde yayın yap</strong> seçeneğini işaretle</li>
+      <li>YouTube’dan aldığın <strong>Yayın Anahtarı</strong>nı yapıştır</li>
+    </ul><div class="highlight">
+  RTMP URL: rtmp://a.rtmp.youtube.com/live2
+</div>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Gün</th>
-          <th>Saat</th>
-          <th>Konu / Seans</th>
-          <th>Nasıl Çalışacağım?</th>
-          <th>Mola & Ödül</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="day">Pazartesi<br><small>Matematik Günü</small></td>
-          <td class="time">18:00–18:20<br>18:30–18:50</td>
-          <td class="lesson">Matematik – Formül tekrarı<br>Tarih – Kısa notlar</td>
-          <td class="how">3 örnek çöz, timer kur<br>1 sayfa oku → yıldızla işaretle, sesli anlat</td>
-          <td class="reward">5 dk zıplama + şarkı<br>10 dk yürüyüş + çizgi film fragmanı</td>
-        </tr>
-        <tr>
-          <td class="day">Salı<br><small>Türkçe Günü</small></td>
-          <td class="time">17:30–17:45<br>18:00–18:20</td>
-          <td class="lesson">Türkçe – Okuma anlama<br>İngilizce – Kelime</td>
-          <td class="how">Paragraf oku → 3 soru cevapla (renkli kalem)<br>10 kelime flashcard → yanlış olunca komik yüz çiz 😜</td>
-          <td class="reward">5 dk esneme + atıştırmalık<br>10 dk telefon oyunu</td>
-        </tr>
-        <tr>
-          <td class="day">Çarşamba<br><small>Fen Günü</small></td>
-          <td class="time">18:00–18:15<br>18:30–18:45</td>
-          <td class="lesson">Biyoloji – Şema<br>Fizik – Deney tekrarı</td>
-          <td class="how">Konuyu ağaç gibi çiz<br>1 formülü kağıda çiz, oyuncakla dene (top at!</td>
-          <td class="reward">Derin nefes + arkadaşına mesaj<br>15 dk dışarı çık</td>
-        </tr>
-        <tr>
-          <td class="day">Perşembe<br><small>Sosyal Günü</small></td>
-          <td class="time">17:00–17:20<br>17:40–18:00</td>
-          <td class="lesson">Coğrafya – Harita<br>Din Kültürü</td>
-          <td class="how">Haritayı renklendir, macera hikayesi uydur<br>Aynada kendine anlat, 3 nokta not et</td>
-          <td class="reward">5 dk dans + eğlenceli kitap<br>10 dk çizim/hobi</td>
-        </tr>
-        <tr>
-          <td class="day">Cuma<br><small>Tekrar Günü</small></td>
-          <td class="time">18:00–18:30</td>
-          <td class="lesson">Haftanın en zayıf konusu</td>
-          <td class="how">15 dk tekrar + 15 dk test çöz (yanlışları sil baştan yap)</td>
-          <td class="reward">20 dk oyun + hafta sonu film seç!</td>
-        </tr>
-        <tr>
-          <td class="day">Cumartesi<br><small>Esnek Gün</small></td>
-          <td class="time">10:00–10:20</td>
-          <td class="lesson">İsteğe bağlı zayıf ders</td>
-          <td class="how">Rahat ortam, müzikle çalışabilirsin</td>
-          <td class="reward">Tüm gün serbest + arkadaş buluşması</td>
-        </tr>
-        <tr>
-          <td class="day">Pazar<br><small>Dinlenme Günü</small></td>
-          <td class="time">—</td>
-          <td class="lesson">Tam dinlenme!</td>
-          <td class="how">Hafif yürüyüş, hobi, planı değerlendir</td>
-          <td class="reward">Aileyle pizza gecesi 🍕🎉</td>
-        </tr>
-      </tbody>
-    </table>
+  </div>  <div class="step">
+    <h2>4. Canlı Yayını Başlat</h2>
+    <ul>
+      <li>Toplantı saatinde Zoom toplantısını başlat</li>
+      <li>Alt menü → <strong>Daha Fazlası</strong> → <strong>Canlı Yayını Başlat</strong></li>
+      <li>Zoom’daki ses ve görüntü otomatik olarak YouTube’a aktarılır</li>
+      <li>YouTube’daki <strong>Paylaş</strong> linkini izleyicilere gönder</li>
+    </ul><div class="info">
+  Yayın <strong>listelenmemiştir</strong>. Sadece bağlantıya sahip olan kişiler izleyebilir.
+</div>
 
-    <div class="tips">
-      <h2 style="text-align:center; color:#ff6f00;">Adım Adım Süper İpuçları</h2>
-      <ol style="font-size:17px;">
-        <li>📱 Telefonu başka odaya koy! Sadece ödül zamanı aç.</li>
-        <li>⏰ 20 dakika çalış → 5-10 dakika mola (timer zilinde zafer dansı yap!)</li>
-        <li>✏️ Renkli kalemler, sticker’lar, post-it’ler kullan → beynin bayılır!</li>
-        <li>Dikkatin kaçarsa → 10 saniye derin nefes al, sonra devam.</li>
-        <li>Her biten seans için “Yaptım!” yaz → 5 seans = büyük ödül (yeni oyun?)</li>
-        <li>Arkadaşınla “çalışma buddy” ol → birbirinize “Bitirdim!” mesajı atın.</li>
-      </ol>
-    </div>
+  </div>  <div class="step">
+    <h2>Yayın Sonlandırma</h2>
+    <ul>
+      <li>Önce Zoom toplantısını sonlandır</li>
+      <li>Ardından YouTube Studio’dan canlı yayını bitir</li>
+    </ul><div class="danger">
+  Yayın açık kalmaması için iki platformda da kapattığından emin ol.
+</div>
 
-    <div class="footer">
-      <span class="emoji">🚀</span> Bu planı uygularsan dersler oyun gibi olacak!<br>
-      DEHB bir dezavantaj değil, senin farklı bir süper gücün!<br>
-      <span class="emoji">💜</span> Sen başarabilirsin, buna inanıyorum! <span class="emoji">💜</span>
-    </div>
-  </div>
-</body>
+  </div>  <div class="step">
+    <h2>Örnek WhatsApp Duyuru Mesajı</h2>
+    <div class="highlight">
+🎥 Zoom üzerinden YouTube'da canlı yayın başladı!📌 İzlemek için bağlantı (özel): https://youtu.be/xxxxxxxxxxx
+
+🔔 Yayın sadece linke sahip olanlar tarafından izlenebilir. </div>
+
+  </div></div><footer>
+  Bu doküman eğitim ve bilgilendirme amaçlıdır.
+</footer></body>
 </html>
